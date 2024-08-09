@@ -52,7 +52,7 @@ type SpotData struct {
 func main() {
 	spotData := fetchSpotData()
 
-	file, err := os.Create("static/spot_data.json")
+	file, err := os.Create("docs/spot_data.json")
 	if err != nil {
 		log.Fatal(err)
 	}
