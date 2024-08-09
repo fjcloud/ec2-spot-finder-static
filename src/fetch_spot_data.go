@@ -14,6 +14,7 @@ import (
 	"time"
 )
 
+// Instance represents an EC2 instance type and its pricing details
 type Instance struct {
 	InstanceType   string `json:"InstanceType"`
 	VCPUS          int    `json:"VCPUS"`
@@ -22,10 +23,12 @@ type Instance struct {
 	SpotPrice      string `json:"SpotPrice"`
 }
 
+// Response represents the structure of the EC2 shop API response
 type Response struct {
 	Prices []Instance `json:"Prices"`
 }
 
+// Region represents an AWS region and its details
 type Region struct {
 	Name      string `json:"name"`
 	Code      string `json:"code"`
@@ -34,6 +37,7 @@ type Region struct {
 	Continent string `json:"continent"`
 }
 
+// GlobalDeal represents a spot instance deal with additional information
 type GlobalDeal struct {
 	InstanceType string  `json:"instanceType"`
 	VCPUS        int     `json:"cpus"`
@@ -43,13 +47,15 @@ type GlobalDeal struct {
 	Region       string  `json:"region"`
 }
 
+// SpotData represents the entire dataset of spot instance deals
 type SpotData struct {
-	LastUpdated string                    `json:"last_updated"`
-	Regions     map[string][]Instance     `json:"regions"`
-	GlobalTop5  []GlobalDeal              `json:"global_top_5"`
+	LastUpdated string                `json:"last_updated"`
+	Regions     map[string][]Instance `json:"regions"`
+	GlobalTop5  []GlobalDeal          `json:"global_top_5"`
 }
 
 func main() {
+	// Fetch spot data and write it to a JSON file
 	spotData := fetchSpotData()
 
 	file, err := os.Create("docs/spot_data.json")
@@ -65,6 +71,7 @@ func main() {
 	}
 }
 
+// fetchSpotData retrieves spot instance data for all regions
 func fetchSpotData() SpotData {
 	regions, err := fetchRegions()
 	if err != nil {
@@ -79,6 +86,7 @@ func fetchSpotData() SpotData {
 	var globalDeals []GlobalDeal
 	var mu sync.Mutex
 
+	// Fetch spot deals for each region concurrently
 	for _, region := range regions {
 		wg.Add(1)
 		go func(r string) {
@@ -91,6 +99,7 @@ func fetchSpotData() SpotData {
 			mu.Lock()
 			spotData.Regions[r] = deals
 			if len(deals) > 0 {
+				// Add the best deal from this region to globalDeals
 				price, _ := strconv.ParseFloat(deals[0].SpotPrice, 64)
 				pricePerVCPU := price / float64(deals[0].VCPUS)
 				globalDeals = append(globalDeals, GlobalDeal{
@@ -108,10 +117,12 @@ func fetchSpotData() SpotData {
 
 	wg.Wait()
 
+	// Sort global deals by price per vCPU
 	sort.Slice(globalDeals, func(i, j int) bool {
 		return globalDeals[i].PricePerVCPU < globalDeals[j].PricePerVCPU
 	})
 
+	// Select top 5 global deals
 	if len(globalDeals) > 5 {
 		spotData.GlobalTop5 = globalDeals[:5]
 	} else {
@@ -121,6 +132,7 @@ func fetchSpotData() SpotData {
 	return spotData
 }
 
+// getSpotDeals fetches spot deals for a specific region
 func getSpotDeals(region string) ([]Instance, error) {
 	url := fmt.Sprintf("https://ec2.shop?region=%s&filter=ebs,cpu>=4,cpu<=32", region)
 	req, err := http.NewRequest("GET", url, nil)
@@ -147,6 +159,7 @@ func getSpotDeals(region string) ([]Instance, error) {
 		return nil, err
 	}
 
+	// Filter instances with high savings rate (>50%)
 	var highSavingsInstances []Instance
 	for _, instance := range response.Prices {
 		savingsRate, err := strconv.Atoi(strings.TrimSuffix(instance.SpotSavingRate, "%"))
@@ -155,6 +168,7 @@ func getSpotDeals(region string) ([]Instance, error) {
 		}
 	}
 
+	// Sort instances by price per vCPU
 	sort.Slice(highSavingsInstances, func(i, j int) bool {
 		priceI, _ := strconv.ParseFloat(highSavingsInstances[i].SpotPrice, 64)
 		priceJ, _ := strconv.ParseFloat(highSavingsInstances[j].SpotPrice, 64)
@@ -166,6 +180,7 @@ func getSpotDeals(region string) ([]Instance, error) {
 	return highSavingsInstances, nil
 }
 
+// fetchRegions retrieves the list of AWS regions
 func fetchRegions() ([]string, error) {
 	resp, err := http.Get("https://b0.p.awsstatic.com/locations/1.0/aws/current/locations.json")
 	if err != nil {
@@ -184,6 +199,7 @@ func fetchRegions() ([]string, error) {
 		return nil, err
 	}
 
+	// Extract region codes for AWS Regions
 	var regionCodes []string
 	for _, region := range regions {
 		if region.Type == "AWS Region" {
@@ -191,7 +207,8 @@ func fetchRegions() ([]string, error) {
 		}
 	}
 
-	sort.Strings(regionCodes)  // Sort the region codes alphabetically
+	// Sort region codes alphabetically
+	sort.Strings(regionCodes)
 
 	return regionCodes, nil
 }
