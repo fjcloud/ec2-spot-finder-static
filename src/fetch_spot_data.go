@@ -6,7 +6,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
 	"sort"
 	"strconv"
 	"strings"
@@ -35,11 +34,11 @@ func main() {
 	newData := fetchSpotData()
 
 	// Read the existing data file, if it exists
-	oldData, _ := readExistingData("spot_data.json")
+	oldData, _ := readExistingData("docs/spot_data.json")
 
 	// Compare old and new data, update file if there are changes
 	if dataChanged(oldData, newData) {
-		writeDataToFile(newData, "spot_data.json")
+		writeDataToFile(newData, "docs/spot_data.json")
 		log.Println("Data updated and saved.")
 	} else {
 		log.Println("No changes in data.")
