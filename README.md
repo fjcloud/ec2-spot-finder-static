@@ -42,7 +42,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Data provided by [EC2 Spot Pricing API](https://aws.amazon.com/ec2/spot/pricing/)
+- Data provided by [ec2.shop](https://ec2.shop/)
 - Inspired by the need for an easy way to compare EC2 Spot Instance prices across regions
 
 ## Disclaimer
