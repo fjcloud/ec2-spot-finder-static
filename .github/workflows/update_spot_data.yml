@@ -1,0 +1,27 @@
+name: Update EC2 Spot Data
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Run every hour
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: '1.20'
+
+    - name: Fetch EC2 Spot Data
+      run: go run fetch_spot_data.go
+
+    - name: Commit and push if changed
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add spot_data.json
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update spot data" && git push)

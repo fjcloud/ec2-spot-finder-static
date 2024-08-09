@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC2 Spot Instance Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EC2 Spot Instance Finder</h1>
+        <div class="form-group">
+            <label for="region-select">Select Region:</label>
+            <select id="region-select"></select>
+        </div>
+        <button id="find-deals">Find Best Deals</button>
+        <button id="find-global-deal">Find Top 5 Global Deals</button>
+        <div id="results"></div>
+        <div id="last-updated"></div>
+    </div>
+
+    <script>
+        let spotData;
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const regionSelect = document.getElementById('region-select');
+            const findDealsButton = document.getElementById('find-deals');
+            const findGlobalDealButton = document.getElementById('find-global-deal');
+            const resultsDiv = document.getElementById('results');
+            const lastUpdatedDiv = document.getElementById('last-updated');
+
+            // Fetch the JSON data
+            try {
+                const response = await fetch('spot_data.json');
+                spotData = await response.json();
+                console.log('Loaded spot data:', spotData);
+
+                // Populate regions
+                Object.keys(spotData.regions).sort().forEach(region => {
+                    const option = document.createElement('option');
+                    option.value = region;
+                    option.textContent = region;
+                    regionSelect.appendChild(option);
+                });
+
+                // Display last updated time
+                const date = new Date(spotData.last_updated);
+                lastUpdatedDiv.textContent = `Last updated: ${date.toLocaleString()}`;
+            } catch (error) {
+                console.error('Error loading spot data:', error);
+                resultsDiv.innerHTML = 'Error loading spot data. Please try again later.';
+            }
+
+            findDealsButton.addEventListener('click', () => {
+                const selectedRegion = regionSelect.value;
+                if (!selectedRegion) {
+                    alert('Please select a region');
+                    return;
+                }
+
+                const deals = spotData.regions[selectedRegion];
+                displayDeals(deals, resultsDiv);
+            });
+
+            findGlobalDealButton.addEventListener('click', () => {
+                displayDeals(spotData.global_top_5, resultsDiv, true);
+            });
+        });
+
+        function displayDeals(deals, container, isGlobal = false) {
+            if (!Array.isArray(deals) || deals.length === 0) {
+                container.innerHTML = 'No deals found matching the criteria.';
+                return;
+            }
+
+            const table = document.createElement('table');
+            table.innerHTML = `
+                <tr>
+                    ${isGlobal ? '<th>Rank</th>' : ''}
+                    <th>Instance Type</th>
+                    <th>CPUs</th>
+                    <th>Memory</th>
+                    <th>Spot Price</th>
+                    <th>Price per vCPU</th>
+                    ${isGlobal ? '<th>Region</th>' : '<th>Spot Savings Rate</th>'}
+                </tr>
+            `;
+
+            deals.forEach((deal, index) => {
+                const row = table.insertRow();
+                if (isGlobal) row.insertCell().textContent = index + 1;
+                row.insertCell().textContent = deal.instanceType;
+                row.insertCell().textContent = deal.cpus;
+                row.insertCell().textContent = deal.memory;
+                row.insertCell().textContent = `$${deal.price.toFixed(4)}`;
+                row.insertCell().textContent = `$${deal.pricePerVCPU.toFixed(6)}`;
+                row.insertCell().textContent = isGlobal ? deal.region : deal.spotSavingRate;
+            });
+
+            container.innerHTML = `<h2>${isGlobal ? 'Top 5 Global Deals' : 'Best Deals'}</h2>`;
+            container.appendChild(table);
+        }
+    </script>
+</body>
+</html>
