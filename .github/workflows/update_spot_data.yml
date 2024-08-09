@@ -17,7 +17,7 @@ jobs:
         go-version: '1.20'
 
     - name: Fetch EC2 Spot Data
-      run: go run fetch_spot_data.go
+      run: go run src/fetch_spot_data.go
 
     - name: Commit and push if changed
       run: |
