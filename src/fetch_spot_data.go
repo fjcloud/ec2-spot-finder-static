@@ -44,15 +44,15 @@ type GlobalDeal struct {
 }
 
 type SpotData struct {
-	LastUpdated string                `json:"last_updated"`
-	Regions     map[string][]Instance `json:"regions"`
-	GlobalTop5  []GlobalDeal          `json:"global_top_5"`
+	LastUpdated string                    `json:"last_updated"`
+	Regions     map[string][]Instance     `json:"regions"`
+	GlobalTop5  []GlobalDeal              `json:"global_top_5"`
 }
 
 func main() {
 	spotData := fetchSpotData()
 
-	file, err := os.Create("spot_data.json")
+	file, err := os.Create("docs/spot_data.json")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -63,7 +63,6 @@ func main() {
 	if err := encoder.Encode(spotData); err != nil {
 		log.Fatal(err)
 	}
-	log.Println("Data updated and saved.")
 }
 
 func fetchSpotData() SpotData {
@@ -192,6 +191,7 @@ func fetchRegions() ([]string, error) {
 		}
 	}
 
-	sort.Strings(regionCodes)
+	sort.Strings(regionCodes)  // Sort the region codes alphabetically
+
 	return regionCodes, nil
 }
