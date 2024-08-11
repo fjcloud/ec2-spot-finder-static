@@ -1,5 +1,5 @@
 {
-  "last_updated": "2024-08-11T15:18:11Z",
+  "last_updated": "2024-08-11T16:19:47Z",
   "regions": {
     "af-south-1": [
       {
@@ -1253,17 +1253,17 @@
         "SpotPrice": "0.1715"
       },
       {
-        "InstanceType": "c7a.xlarge",
-        "VCPUS": 4,
-        "Memory": "8 GiB",
-        "SpotSavingRate": "60%",
-        "SpotPrice": "0.0861"
-      },
-      {
         "InstanceType": "c6i.xlarge",
         "VCPUS": 4,
         "Memory": "8 GiB",
         "SpotSavingRate": "59%",
+        "SpotPrice": "0.0861"
+      },
+      {
+        "InstanceType": "c7a.xlarge",
+        "VCPUS": 4,
+        "Memory": "8 GiB",
+        "SpotSavingRate": "60%",
         "SpotPrice": "0.0861"
       },
       {
@@ -2431,18 +2431,18 @@
         "SpotPrice": "0.0694"
       },
       {
-        "InstanceType": "c5.2xlarge",
-        "VCPUS": 8,
-        "Memory": "16 GiB",
-        "SpotSavingRate": "71%",
-        "SpotPrice": "0.1402"
-      },
-      {
         "InstanceType": "r7g.xlarge",
         "VCPUS": 4,
         "Memory": "32 GiB",
         "SpotSavingRate": "88%",
         "SpotPrice": "0.0701"
+      },
+      {
+        "InstanceType": "c5.2xlarge",
+        "VCPUS": 8,
+        "Memory": "16 GiB",
+        "SpotSavingRate": "71%",
+        "SpotPrice": "0.1402"
       },
       {
         "InstanceType": "c6i.xlarge",
@@ -2557,18 +2557,18 @@
         "SpotPrice": "0.2976"
       },
       {
-        "InstanceType": "c5n.xlarge",
-        "VCPUS": 4,
-        "Memory": "10.5 GiB",
-        "SpotSavingRate": "72%",
-        "SpotPrice": "0.0754"
-      },
-      {
         "InstanceType": "c5a.2xlarge",
         "VCPUS": 8,
         "Memory": "16 GiB",
         "SpotSavingRate": "65%",
         "SpotPrice": "0.1508"
+      },
+      {
+        "InstanceType": "c5n.xlarge",
+        "VCPUS": 4,
+        "Memory": "10.5 GiB",
+        "SpotSavingRate": "72%",
+        "SpotPrice": "0.0754"
       },
       {
         "InstanceType": "c7i.2xlarge",
@@ -2676,18 +2676,18 @@
         "SpotPrice": "0.6861"
       },
       {
-        "InstanceType": "r5.2xlarge",
-        "VCPUS": 8,
-        "Memory": "64 GiB",
-        "SpotSavingRate": "72%",
-        "SpotPrice": "0.1768"
-      },
-      {
         "InstanceType": "m6g.8xlarge",
         "VCPUS": 32,
         "Memory": "128 GiB",
         "SpotSavingRate": "62%",
         "SpotPrice": "0.7072"
+      },
+      {
+        "InstanceType": "r5.2xlarge",
+        "VCPUS": 8,
+        "Memory": "64 GiB",
+        "SpotSavingRate": "72%",
+        "SpotPrice": "0.1768"
       },
       {
         "InstanceType": "c6in.xlarge",
@@ -2739,17 +2739,17 @@
         "SpotPrice": "0.0939"
       },
       {
-        "InstanceType": "r5a.xlarge",
-        "VCPUS": 4,
-        "Memory": "32 GiB",
-        "SpotSavingRate": "68%",
-        "SpotPrice": "0.0940"
-      },
-      {
         "InstanceType": "r5b.xlarge",
         "VCPUS": 4,
         "Memory": "32 GiB",
         "SpotSavingRate": "78%",
+        "SpotPrice": "0.0940"
+      },
+      {
+        "InstanceType": "r5a.xlarge",
+        "VCPUS": 4,
+        "Memory": "32 GiB",
+        "SpotSavingRate": "68%",
         "SpotPrice": "0.0940"
       },
       {
@@ -5829,14 +5829,14 @@
         "SpotPrice": "0.3244"
       },
       {
-        "InstanceType": "t3a.2xlarge",
+        "InstanceType": "t3.2xlarge",
         "VCPUS": 8,
         "Memory": "32 GiB",
         "SpotSavingRate": "60%",
         "SpotPrice": "0.1629"
       },
       {
-        "InstanceType": "t3.2xlarge",
+        "InstanceType": "t3a.2xlarge",
         "VCPUS": 8,
         "Memory": "32 GiB",
         "SpotSavingRate": "60%",
@@ -5983,17 +5983,17 @@
         "SpotPrice": "0.0915"
       },
       {
-        "InstanceType": "r7g.2xlarge",
-        "VCPUS": 8,
-        "Memory": "64 GiB",
-        "SpotSavingRate": "62%",
-        "SpotPrice": "0.1849"
-      },
-      {
         "InstanceType": "c5a.2xlarge",
         "VCPUS": 8,
         "Memory": "16 GiB",
         "SpotSavingRate": "58%",
+        "SpotPrice": "0.1849"
+      },
+      {
+        "InstanceType": "r7g.2xlarge",
+        "VCPUS": 8,
+        "Memory": "64 GiB",
+        "SpotSavingRate": "62%",
         "SpotPrice": "0.1849"
       },
       {
@@ -6081,17 +6081,17 @@
         "SpotPrice": "0.7784"
       },
       {
-        "InstanceType": "m7i-flex.xlarge",
-        "VCPUS": 4,
-        "Memory": "16 GiB",
-        "SpotSavingRate": "59%",
-        "SpotPrice": "0.0977"
-      },
-      {
         "InstanceType": "c5.xlarge",
         "VCPUS": 4,
         "Memory": "8 GiB",
         "SpotSavingRate": "57%",
+        "SpotPrice": "0.0977"
+      },
+      {
+        "InstanceType": "m7i-flex.xlarge",
+        "VCPUS": 4,
+        "Memory": "16 GiB",
+        "SpotSavingRate": "59%",
         "SpotPrice": "0.0977"
       },
       {
@@ -6242,18 +6242,18 @@
         "SpotPrice": "0.1047"
       },
       {
-        "InstanceType": "m7i.2xlarge",
-        "VCPUS": 8,
-        "Memory": "32 GiB",
-        "SpotSavingRate": "57%",
-        "SpotPrice": "0.2122"
-      },
-      {
         "InstanceType": "r7i.xlarge",
         "VCPUS": 4,
         "Memory": "32 GiB",
         "SpotSavingRate": "64%",
         "SpotPrice": "0.1061"
+      },
+      {
+        "InstanceType": "m7i.2xlarge",
+        "VCPUS": 8,
+        "Memory": "32 GiB",
+        "SpotSavingRate": "57%",
+        "SpotPrice": "0.2122"
       },
       {
         "InstanceType": "c6in.xlarge",
@@ -7501,18 +7501,18 @@
         "SpotPrice": "0.5251"
       },
       {
-        "InstanceType": "c5a.4xlarge",
-        "VCPUS": 16,
-        "Memory": "32 GiB",
-        "SpotSavingRate": "60%",
-        "SpotPrice": "0.2632"
-      },
-      {
         "InstanceType": "m5.8xlarge",
         "VCPUS": 32,
         "Memory": "128 GiB",
         "SpotSavingRate": "67%",
         "SpotPrice": "0.5264"
+      },
+      {
+        "InstanceType": "c5a.4xlarge",
+        "VCPUS": 16,
+        "Memory": "32 GiB",
+        "SpotSavingRate": "60%",
+        "SpotPrice": "0.2632"
       },
       {
         "InstanceType": "r6i.xlarge",
@@ -7802,18 +7802,18 @@
         "SpotPrice": "0.0787"
       },
       {
-        "InstanceType": "t3a.xlarge",
-        "VCPUS": 4,
-        "Memory": "16 GiB",
-        "SpotSavingRate": "57%",
-        "SpotPrice": "0.0788"
-      },
-      {
         "InstanceType": "m5.2xlarge",
         "VCPUS": 8,
         "Memory": "32 GiB",
         "SpotSavingRate": "62%",
         "SpotPrice": "0.1576"
+      },
+      {
+        "InstanceType": "t3a.xlarge",
+        "VCPUS": 4,
+        "Memory": "16 GiB",
+        "SpotSavingRate": "57%",
+        "SpotPrice": "0.0788"
       },
       {
         "InstanceType": "c5n.4xlarge",
@@ -9031,18 +9031,18 @@
         "SpotPrice": "0.1852"
       },
       {
-        "InstanceType": "c6gn.xlarge",
-        "VCPUS": 4,
-        "Memory": "8 GiB",
-        "SpotSavingRate": "56%",
-        "SpotPrice": "0.0927"
-      },
-      {
         "InstanceType": "r7g.4xlarge",
         "VCPUS": 16,
         "Memory": "128 GiB",
         "SpotSavingRate": "66%",
         "SpotPrice": "0.3708"
+      },
+      {
+        "InstanceType": "c6gn.xlarge",
+        "VCPUS": 4,
+        "Memory": "8 GiB",
+        "SpotSavingRate": "56%",
+        "SpotPrice": "0.0927"
       },
       {
         "InstanceType": "m7i-flex.2xlarge",
@@ -10218,18 +10218,18 @@
         "SpotPrice": "0.2247"
       },
       {
-        "InstanceType": "t3.2xlarge",
-        "VCPUS": 8,
-        "Memory": "32 GiB",
-        "SpotSavingRate": "69%",
-        "SpotPrice": "0.1128"
-      },
-      {
         "InstanceType": "t3.xlarge",
         "VCPUS": 4,
         "Memory": "16 GiB",
         "SpotSavingRate": "67%",
         "SpotPrice": "0.0564"
+      },
+      {
+        "InstanceType": "t3.2xlarge",
+        "VCPUS": 8,
+        "Memory": "32 GiB",
+        "SpotSavingRate": "69%",
+        "SpotPrice": "0.1128"
       },
       {
         "InstanceType": "r6i.xlarge",
@@ -10428,17 +10428,17 @@
         "SpotPrice": "0.5884"
       },
       {
-        "InstanceType": "c5n.xlarge",
-        "VCPUS": 4,
-        "Memory": "10.5 GiB",
-        "SpotSavingRate": "68%",
-        "SpotPrice": "0.0741"
-      },
-      {
         "InstanceType": "c6in.xlarge",
         "VCPUS": 4,
         "Memory": "8 GiB",
         "SpotSavingRate": "70%",
+        "SpotPrice": "0.0741"
+      },
+      {
+        "InstanceType": "c5n.xlarge",
+        "VCPUS": 4,
+        "Memory": "10.5 GiB",
+        "SpotSavingRate": "68%",
         "SpotPrice": "0.0741"
       },
       {
@@ -10815,17 +10815,17 @@
         "SpotPrice": "0.0609"
       },
       {
-        "InstanceType": "c6g.2xlarge",
-        "VCPUS": 8,
-        "Memory": "16 GiB",
-        "SpotSavingRate": "90%",
-        "SpotPrice": "0.0610"
-      },
-      {
         "InstanceType": "t3a.2xlarge",
         "VCPUS": 8,
         "Memory": "32 GiB",
         "SpotSavingRate": "88%",
+        "SpotPrice": "0.0610"
+      },
+      {
+        "InstanceType": "c6g.2xlarge",
+        "VCPUS": 8,
+        "Memory": "16 GiB",
+        "SpotSavingRate": "90%",
         "SpotPrice": "0.0610"
       },
       {
@@ -11032,18 +11032,18 @@
         "SpotPrice": "0.3704"
       },
       {
-        "InstanceType": "m6a.2xlarge",
-        "VCPUS": 8,
-        "Memory": "32 GiB",
-        "SpotSavingRate": "90%",
-        "SpotPrice": "0.0930"
-      },
-      {
         "InstanceType": "m6i.xlarge",
         "VCPUS": 4,
         "Memory": "16 GiB",
         "SpotSavingRate": "90%",
         "SpotPrice": "0.0465"
+      },
+      {
+        "InstanceType": "m6a.2xlarge",
+        "VCPUS": 8,
+        "Memory": "32 GiB",
+        "SpotSavingRate": "90%",
+        "SpotPrice": "0.0930"
       },
       {
         "InstanceType": "c5.xlarge",
@@ -12219,17 +12219,17 @@
         "SpotPrice": "0.7265"
       },
       {
-        "InstanceType": "m5a.xlarge",
-        "VCPUS": 4,
-        "Memory": "16 GiB",
-        "SpotSavingRate": "55%",
-        "SpotPrice": "0.0910"
-      },
-      {
         "InstanceType": "m6a.xlarge",
         "VCPUS": 4,
         "Memory": "16 GiB",
         "SpotSavingRate": "54%",
+        "SpotPrice": "0.0910"
+      },
+      {
+        "InstanceType": "m5a.xlarge",
+        "VCPUS": 4,
+        "Memory": "16 GiB",
+        "SpotSavingRate": "55%",
         "SpotPrice": "0.0910"
       },
       {
@@ -12275,17 +12275,17 @@
         "SpotPrice": "0.1851"
       },
       {
-        "InstanceType": "m6a.2xlarge",
-        "VCPUS": 8,
-        "Memory": "32 GiB",
-        "SpotSavingRate": "54%",
-        "SpotPrice": "0.1856"
-      },
-      {
         "InstanceType": "c7i.2xlarge",
         "VCPUS": 8,
         "Memory": "16 GiB",
         "SpotSavingRate": "55%",
+        "SpotPrice": "0.1856"
+      },
+      {
+        "InstanceType": "m6a.2xlarge",
+        "VCPUS": 8,
+        "Memory": "32 GiB",
+        "SpotSavingRate": "54%",
         "SpotPrice": "0.1856"
       },
       {
@@ -12415,18 +12415,18 @@
         "SpotPrice": "0.2031"
       },
       {
-        "InstanceType": "inf1.xlarge",
-        "VCPUS": 4,
-        "Memory": "8 GiB",
-        "SpotSavingRate": "57%",
-        "SpotPrice": "0.1016"
-      },
-      {
         "InstanceType": "c7gn.2xlarge",
         "VCPUS": 8,
         "Memory": "16 GiB",
         "SpotSavingRate": "58%",
         "SpotPrice": "0.2032"
+      },
+      {
+        "InstanceType": "inf1.xlarge",
+        "VCPUS": 4,
+        "Memory": "8 GiB",
+        "SpotSavingRate": "57%",
+        "SpotPrice": "0.1016"
       },
       {
         "InstanceType": "c5n.2xlarge",
@@ -13257,18 +13257,18 @@
         "SpotPrice": "0.3037"
       },
       {
-        "InstanceType": "c6a.2xlarge",
-        "VCPUS": 8,
-        "Memory": "16 GiB",
-        "SpotSavingRate": "62%",
-        "SpotPrice": "0.1532"
-      },
-      {
         "InstanceType": "c6a.xlarge",
         "VCPUS": 4,
         "Memory": "8 GiB",
         "SpotSavingRate": "57%",
         "SpotPrice": "0.0766"
+      },
+      {
+        "InstanceType": "c6a.2xlarge",
+        "VCPUS": 8,
+        "Memory": "16 GiB",
+        "SpotSavingRate": "62%",
+        "SpotPrice": "0.1532"
       },
       {
         "InstanceType": "m5.8xlarge",
@@ -13896,18 +13896,18 @@
         "SpotPrice": "0.0262"
       },
       {
-        "InstanceType": "c6g.8xlarge",
-        "VCPUS": 32,
-        "Memory": "64 GiB",
-        "SpotSavingRate": "78%",
-        "SpotPrice": "0.2144"
-      },
-      {
         "InstanceType": "c7i.2xlarge",
         "VCPUS": 8,
         "Memory": "16 GiB",
         "SpotSavingRate": "73%",
         "SpotPrice": "0.0536"
+      },
+      {
+        "InstanceType": "c6g.8xlarge",
+        "VCPUS": 32,
+        "Memory": "64 GiB",
+        "SpotSavingRate": "78%",
+        "SpotPrice": "0.2144"
       },
       {
         "InstanceType": "c7i.8xlarge",
@@ -15661,18 +15661,18 @@
         "SpotPrice": "0.2081"
       },
       {
-        "InstanceType": "c6gn.8xlarge",
-        "VCPUS": 32,
-        "Memory": "64 GiB",
-        "SpotSavingRate": "90%",
-        "SpotPrice": "0.2128"
-      },
-      {
         "InstanceType": "c6gn.4xlarge",
         "VCPUS": 16,
         "Memory": "32 GiB",
         "SpotSavingRate": "90%",
         "SpotPrice": "0.1064"
+      },
+      {
+        "InstanceType": "c6gn.8xlarge",
+        "VCPUS": 32,
+        "Memory": "64 GiB",
+        "SpotSavingRate": "90%",
+        "SpotPrice": "0.2128"
       },
       {
         "InstanceType": "c6gn.xlarge",
@@ -15794,18 +15794,18 @@
         "SpotPrice": "0.1887"
       },
       {
-        "InstanceType": "r5n.8xlarge",
-        "VCPUS": 32,
-        "Memory": "256 GiB",
-        "SpotSavingRate": "86%",
-        "SpotPrice": "0.3776"
-      },
-      {
         "InstanceType": "r5n.2xlarge",
         "VCPUS": 8,
         "Memory": "64 GiB",
         "SpotSavingRate": "88%",
         "SpotPrice": "0.0944"
+      },
+      {
+        "InstanceType": "r5n.8xlarge",
+        "VCPUS": 32,
+        "Memory": "256 GiB",
+        "SpotSavingRate": "86%",
+        "SpotPrice": "0.3776"
       },
       {
         "InstanceType": "r5b.xlarge",
@@ -15878,6 +15878,13 @@
         "SpotPrice": "0.4464"
       },
       {
+        "InstanceType": "r4.2xlarge",
+        "VCPUS": 8,
+        "Memory": "61 GiB",
+        "SpotSavingRate": "82%",
+        "SpotPrice": "0.1120"
+      },
+      {
         "InstanceType": "r4.4xlarge",
         "VCPUS": 16,
         "Memory": "122 GiB",
@@ -15890,13 +15897,6 @@
         "Memory": "244 GiB",
         "SpotSavingRate": "87%",
         "SpotPrice": "0.4480"
-      },
-      {
-        "InstanceType": "r4.2xlarge",
-        "VCPUS": 8,
-        "Memory": "61 GiB",
-        "SpotSavingRate": "82%",
-        "SpotPrice": "0.1120"
       },
       {
         "InstanceType": "r5b.4xlarge",
@@ -16130,17 +16130,17 @@
         "SpotPrice": "0.1718"
       },
       {
-        "InstanceType": "c6in.4xlarge",
-        "VCPUS": 16,
-        "Memory": "32 GiB",
-        "SpotSavingRate": "75%",
-        "SpotPrice": "0.3455"
-      },
-      {
         "InstanceType": "m5a.4xlarge",
         "VCPUS": 16,
         "Memory": "64 GiB",
         "SpotSavingRate": "58%",
+        "SpotPrice": "0.3455"
+      },
+      {
+        "InstanceType": "c6in.4xlarge",
+        "VCPUS": 16,
+        "Memory": "32 GiB",
+        "SpotSavingRate": "75%",
         "SpotPrice": "0.3455"
       },
       {
@@ -16622,17 +16622,17 @@
         "SpotPrice": "0.5862"
       },
       {
-        "InstanceType": "c6a.2xlarge",
-        "VCPUS": 8,
-        "Memory": "16 GiB",
-        "SpotSavingRate": "62%",
-        "SpotPrice": "0.1474"
-      },
-      {
         "InstanceType": "t3a.2xlarge",
         "VCPUS": 8,
         "Memory": "32 GiB",
         "SpotSavingRate": "67%",
+        "SpotPrice": "0.1474"
+      },
+      {
+        "InstanceType": "c6a.2xlarge",
+        "VCPUS": 8,
+        "Memory": "16 GiB",
+        "SpotSavingRate": "62%",
         "SpotPrice": "0.1474"
       },
       {
@@ -17919,13 +17919,6 @@
         "SpotPrice": "0.1213"
       },
       {
-        "InstanceType": "r6g.xlarge",
-        "VCPUS": 4,
-        "Memory": "32 GiB",
-        "SpotSavingRate": "64%",
-        "SpotPrice": "0.0613"
-      },
-      {
         "InstanceType": "c7g.xlarge",
         "VCPUS": 4,
         "Memory": "8 GiB",
@@ -17933,17 +17926,24 @@
         "SpotPrice": "0.0613"
       },
       {
-        "InstanceType": "m7g.xlarge",
+        "InstanceType": "r6g.xlarge",
         "VCPUS": 4,
-        "Memory": "16 GiB",
-        "SpotSavingRate": "63%",
-        "SpotPrice": "0.0623"
+        "Memory": "32 GiB",
+        "SpotSavingRate": "64%",
+        "SpotPrice": "0.0613"
       },
       {
         "InstanceType": "t2.xlarge",
         "VCPUS": 4,
         "Memory": "16 GiB",
         "SpotSavingRate": "67%",
+        "SpotPrice": "0.0623"
+      },
+      {
+        "InstanceType": "m7g.xlarge",
+        "VCPUS": 4,
+        "Memory": "16 GiB",
+        "SpotSavingRate": "63%",
         "SpotPrice": "0.0623"
       },
       {
@@ -18010,13 +18010,6 @@
         "SpotPrice": "0.2591"
       },
       {
-        "InstanceType": "m5a.8xlarge",
-        "VCPUS": 32,
-        "Memory": "128 GiB",
-        "SpotSavingRate": "62%",
-        "SpotPrice": "0.5206"
-      },
-      {
         "InstanceType": "c6i.4xlarge",
         "VCPUS": 16,
         "Memory": "32 GiB",
@@ -18024,11 +18017,11 @@
         "SpotPrice": "0.2603"
       },
       {
-        "InstanceType": "r7g.4xlarge",
-        "VCPUS": 16,
+        "InstanceType": "m5a.8xlarge",
+        "VCPUS": 32,
         "Memory": "128 GiB",
-        "SpotSavingRate": "64%",
-        "SpotPrice": "0.2627"
+        "SpotSavingRate": "62%",
+        "SpotPrice": "0.5206"
       },
       {
         "InstanceType": "r6g.8xlarge",
@@ -18036,6 +18029,13 @@
         "Memory": "256 GiB",
         "SpotSavingRate": "64%",
         "SpotPrice": "0.5254"
+      },
+      {
+        "InstanceType": "r7g.4xlarge",
+        "VCPUS": 16,
+        "Memory": "128 GiB",
+        "SpotSavingRate": "64%",
+        "SpotPrice": "0.2627"
       },
       {
         "InstanceType": "c6a.xlarge",
@@ -18766,18 +18766,18 @@
         "SpotPrice": "0.1180"
       },
       {
-        "InstanceType": "inf2.xlarge",
-        "VCPUS": 4,
-        "Memory": "16 GiB",
-        "SpotSavingRate": "71%",
-        "SpotPrice": "0.1203"
-      },
-      {
         "InstanceType": "r5n.8xlarge",
         "VCPUS": 32,
         "Memory": "256 GiB",
         "SpotSavingRate": "60%",
         "SpotPrice": "0.9624"
+      },
+      {
+        "InstanceType": "inf2.xlarge",
+        "VCPUS": 4,
+        "Memory": "16 GiB",
+        "SpotSavingRate": "71%",
+        "SpotPrice": "0.1203"
       },
       {
         "InstanceType": "r6in.4xlarge",
@@ -19233,18 +19233,18 @@
         "SpotPrice": "0.6504"
       },
       {
-        "InstanceType": "m6a.xlarge",
-        "VCPUS": 4,
-        "Memory": "16 GiB",
-        "SpotSavingRate": "62%",
-        "SpotPrice": "0.0817"
-      },
-      {
         "InstanceType": "m7i-flex.2xlarge",
         "VCPUS": 8,
         "Memory": "32 GiB",
         "SpotSavingRate": "64%",
         "SpotPrice": "0.1634"
+      },
+      {
+        "InstanceType": "m6a.xlarge",
+        "VCPUS": 4,
+        "Memory": "16 GiB",
+        "SpotSavingRate": "62%",
+        "SpotPrice": "0.0817"
       },
       {
         "InstanceType": "c7i.4xlarge",
@@ -19681,18 +19681,18 @@
         "SpotPrice": "0.4513"
       },
       {
-        "InstanceType": "r4.2xlarge",
-        "VCPUS": 8,
-        "Memory": "61 GiB",
-        "SpotSavingRate": "65%",
-        "SpotPrice": "0.2260"
-      },
-      {
         "InstanceType": "r4.xlarge",
         "VCPUS": 4,
         "Memory": "30.5 GiB",
         "SpotSavingRate": "67%",
         "SpotPrice": "0.1130"
+      },
+      {
+        "InstanceType": "r4.2xlarge",
+        "VCPUS": 8,
+        "Memory": "61 GiB",
+        "SpotSavingRate": "65%",
+        "SpotPrice": "0.2260"
       },
       {
         "InstanceType": "m6in.4xlarge",
