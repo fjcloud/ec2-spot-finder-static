@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"reflect"
 	"sort"
 	"strconv"
 	"strings"
@@ -55,9 +56,24 @@ type SpotData struct {
 }
 
 func main() {
-	// Fetch spot data and write it to a JSON file
-	spotData := fetchSpotData()
+	// Fetch new spot data
+	newSpotData := fetchSpotData()
 
+	// Read existing data if file exists
+	existingData, err := readExistingData("docs/spot_data.json")
+	if err == nil {
+		// Merge new data with existing data, preserving order
+		mergedData := mergeSpotData(existingData, newSpotData)
+
+		if reflect.DeepEqual(existingData, mergedData) {
+			log.Println("No changes in spot data. Skipping file write.")
+			return
+		}
+
+		newSpotData = mergedData
+	}
+
+	// Write merged data to file
 	file, err := os.Create("docs/spot_data.json")
 	if err != nil {
 		log.Fatal(err)
@@ -66,9 +82,71 @@ func main() {
 
 	encoder := json.NewEncoder(file)
 	encoder.SetIndent("", "  ")
-	if err := encoder.Encode(spotData); err != nil {
+	if err := encoder.Encode(newSpotData); err != nil {
 		log.Fatal(err)
 	}
+
+	log.Println("Updated spot data written to file.")
+}
+
+func readExistingData(filename string) (SpotData, error) {
+	var existingData SpotData
+	file, err := os.Open(filename)
+	if err != nil {
+		return existingData, err
+	}
+	defer file.Close()
+
+	decoder := json.NewDecoder(file)
+	err = decoder.Decode(&existingData)
+	return existingData, err
+}
+
+func mergeSpotData(existing, new SpotData) SpotData {
+	merged := existing
+
+	// Update LastUpdated if changed
+	if existing.LastUpdated != new.LastUpdated {
+		merged.LastUpdated = new.LastUpdated
+	}
+
+	// Merge Regions data
+	for region, newInstances := range new.Regions {
+		if existingInstances, ok := existing.Regions[region]; ok {
+			merged.Regions[region] = mergeInstances(existingInstances, newInstances)
+		} else {
+			merged.Regions[region] = newInstances
+		}
+	}
+
+	// Update GlobalTop5 if changed
+	if !reflect.DeepEqual(existing.GlobalTop5, new.GlobalTop5) {
+		merged.GlobalTop5 = new.GlobalTop5
+	}
+
+	return merged
+}
+
+func mergeInstances(existing, new []Instance) []Instance {
+	merged := make([]Instance, len(existing))
+	copy(merged, existing)
+
+	existingMap := make(map[string]int)
+	for i, instance := range existing {
+		existingMap[instance.InstanceType] = i
+	}
+
+	for _, newInstance := range new {
+		if i, ok := existingMap[newInstance.InstanceType]; ok {
+			// Update existing instance
+			merged[i] = newInstance
+		} else {
+			// Add new instance
+			merged = append(merged, newInstance)
+		}
+	}
+
+	return merged
 }
 
 // fetchSpotData retrieves spot instance data for all regions
@@ -97,8 +175,8 @@ func fetchSpotData() SpotData {
 				return
 			}
 			mu.Lock()
-			spotData.Regions[r] = deals
 			if len(deals) > 0 {
+				spotData.Regions[r] = deals
 				// Add the best deal from this region to globalDeals
 				price, _ := strconv.ParseFloat(deals[0].SpotPrice, 64)
 				pricePerVCPU := price / float64(deals[0].VCPUS)
