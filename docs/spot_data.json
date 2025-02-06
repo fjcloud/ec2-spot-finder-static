@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-02-05T01:02:13Z",
+  "last_updated": "2025-02-06T01:02:27Z",
   "regions": {
     "af-south-1": [
       {
@@ -21490,12 +21490,12 @@
       "region": "ap-northeast-3"
     },
     {
-      "instanceType": "c6g.4xlarge",
-      "cpus": 16,
-      "memory": "32 GiB",
-      "price": 0.0838,
-      "pricePerVCPU": 0.0052375,
-      "region": "sa-east-1"
+      "instanceType": "c6g.8xlarge",
+      "cpus": 32,
+      "memory": "64 GiB",
+      "price": 0.165,
+      "pricePerVCPU": 0.00515625,
+      "region": "ap-south-2"
     }
   ]
 }
