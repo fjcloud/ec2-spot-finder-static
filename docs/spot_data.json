@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-03-16T01:10:54Z",
+  "last_updated": "2025-03-17T01:08:30Z",
   "regions": {
     "af-south-1": [
       {
@@ -21465,12 +21465,12 @@
   },
   "global_top_5": [
     {
-      "instanceType": "c6g.8xlarge",
+      "instanceType": "g5g.8xlarge",
       "cpus": 32,
       "memory": "64 GiB",
-      "price": 0.1428,
-      "pricePerVCPU": 0.0044625,
-      "region": "ap-east-1"
+      "price": 0.1396,
+      "pricePerVCPU": 0.0043625,
+      "region": "us-west-2"
     },
     {
       "instanceType": "t4g.2xlarge",
