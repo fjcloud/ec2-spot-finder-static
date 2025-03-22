@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-03-21T01:07:04Z",
+  "last_updated": "2025-03-22T01:05:24Z",
   "regions": {
     "af-south-1": [
       {
@@ -21465,6 +21465,14 @@
   },
   "global_top_5": [
     {
+      "instanceType": "g5g.8xlarge",
+      "cpus": 32,
+      "memory": "64 GiB",
+      "price": 0.1396,
+      "pricePerVCPU": 0.0043625,
+      "region": "us-west-2"
+    },
+    {
       "instanceType": "c6g.8xlarge",
       "cpus": 32,
       "memory": "64 GiB",
@@ -21495,14 +21503,6 @@
       "price": 0.165,
       "pricePerVCPU": 0.00515625,
       "region": "ap-south-2"
-    },
-    {
-      "instanceType": "c6g.4xlarge",
-      "cpus": 16,
-      "memory": "32 GiB",
-      "price": 0.0838,
-      "pricePerVCPU": 0.0052375,
-      "region": "sa-east-1"
     }
   ]
 }
