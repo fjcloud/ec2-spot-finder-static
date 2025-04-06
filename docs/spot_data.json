@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-04-05T01:06:25Z",
+  "last_updated": "2025-04-06T01:12:06Z",
   "regions": {
     "af-south-1": [
       {
@@ -21472,12 +21472,12 @@
   },
   "global_top_5": [
     {
-      "instanceType": "t4g.2xlarge",
-      "cpus": 8,
-      "memory": "32 GiB",
-      "price": 0.0407,
-      "pricePerVCPU": 0.0050875,
-      "region": "ap-northeast-3"
+      "instanceType": "g5g.8xlarge",
+      "cpus": 32,
+      "memory": "64 GiB",
+      "price": 0.1396,
+      "pricePerVCPU": 0.0043625,
+      "region": "us-west-2"
     },
     {
       "instanceType": "c6g.8xlarge",
@@ -21488,28 +21488,28 @@
       "region": "ap-south-2"
     },
     {
-      "instanceType": "g5g.8xlarge",
-      "cpus": 32,
-      "memory": "64 GiB",
-      "price": 0.1852,
-      "pricePerVCPU": 0.0057875,
-      "region": "ap-northeast-1"
+      "instanceType": "inf1.6xlarge",
+      "cpus": 24,
+      "memory": "48 GiB",
+      "price": 0.1376,
+      "pricePerVCPU": 0.005733333333333333,
+      "region": "eu-north-1"
     },
     {
-      "instanceType": "c7i.xlarge",
-      "cpus": 4,
-      "memory": "8 GiB",
-      "price": 0.0262,
-      "pricePerVCPU": 0.00655,
-      "region": "eu-west-3"
-    },
-    {
-      "instanceType": "t4g.2xlarge",
-      "cpus": 8,
+      "instanceType": "c7g.4xlarge",
+      "cpus": 16,
       "memory": "32 GiB",
-      "price": 0.0544,
-      "pricePerVCPU": 0.0068,
-      "region": "ap-southeast-4"
+      "price": 0.0947,
+      "pricePerVCPU": 0.00591875,
+      "region": "ap-southeast-1"
+    },
+    {
+      "instanceType": "m6g.8xlarge",
+      "cpus": 32,
+      "memory": "128 GiB",
+      "price": 0.19,
+      "pricePerVCPU": 0.0059375,
+      "region": "eu-south-1"
     }
   ]
 }
