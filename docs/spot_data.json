@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-04-10T01:07:59Z",
+  "last_updated": "2025-04-11T01:08:40Z",
   "regions": {
     "af-south-1": [
       {
@@ -21470,46 +21470,5 @@
       }
     ]
   },
-  "global_top_5": [
-    {
-      "instanceType": "t4g.2xlarge",
-      "cpus": 8,
-      "memory": "32 GiB",
-      "price": 0.0377,
-      "pricePerVCPU": 0.0047125,
-      "region": "ap-southeast-3"
-    },
-    {
-      "instanceType": "c6g.4xlarge",
-      "cpus": 16,
-      "memory": "32 GiB",
-      "price": 0.0838,
-      "pricePerVCPU": 0.0052375,
-      "region": "sa-east-1"
-    },
-    {
-      "instanceType": "g5g.8xlarge",
-      "cpus": 32,
-      "memory": "64 GiB",
-      "price": 0.1688,
-      "pricePerVCPU": 0.005275,
-      "region": "ap-northeast-2"
-    },
-    {
-      "instanceType": "inf1.6xlarge",
-      "cpus": 24,
-      "memory": "48 GiB",
-      "price": 0.1376,
-      "pricePerVCPU": 0.005733333333333333,
-      "region": "eu-north-1"
-    },
-    {
-      "instanceType": "g5g.8xlarge",
-      "cpus": 32,
-      "memory": "64 GiB",
-      "price": 0.1852,
-      "pricePerVCPU": 0.0057875,
-      "region": "ap-northeast-1"
-    }
-  ]
+  "global_top_5": null
 }
